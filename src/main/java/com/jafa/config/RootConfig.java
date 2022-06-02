@@ -8,6 +8,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import com.jafa.service.BoardService;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
@@ -18,8 +19,8 @@ public class RootConfig {
 	@Bean
 	public DataSource dataSource() {
 		HikariConfig config = new HikariConfig();
-		config.setDriverClassName("com.mysql.cj.jdbc.Driver");
-		config.setJdbcUrl("jdbc:mysql://localhost/board_ex2");
+		config.setDriverClassName("net.sf.log4jdbc.sql.jdbcapi.DriverSpy");
+		config.setJdbcUrl("jdbc:log4jdbc:mysql://localhost/board_ex2");
 		config.setUsername("root");
 		config.setPassword("1234");
 		return new HikariDataSource(config);
@@ -32,4 +33,5 @@ public class RootConfig {
 		sqlSessionFactoryBean.setDataSource(dataSource());
 		return sqlSessionFactoryBean.getObject();
 	}
+	
 }

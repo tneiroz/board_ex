@@ -14,10 +14,10 @@ import lombok.ToString;
 @NoArgsConstructor
 public class Board {
 
-	private long bno; // 게시물 번호
+	private long bno; 
 	private String title;
-	private String contents; // 게시판 내용
-	private String writer; // 작성자
+	private String content; 
+	private String writer; 
 	private LocalDateTime regDate;
 	private LocalDateTime updateDate;
 
