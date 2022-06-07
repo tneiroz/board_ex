@@ -22,11 +22,11 @@ public class PagingTest {
 		public void insertData() {
 			
 			
-			for(int i = 1; i <=412; i ++) {	
+			for(int i = 1; i <=212; i ++) {	
 				Board board = new Board();
-				board.setTitle("제목: 테스트 중 입니다. ");
-				board.setContent("내용: 테스트 중 입니다.");
-				board.setWriter("글쓴이");
+				board.setTitle("제목: JSP중 입니다. " +i);
+				board.setContent("내용: 자바 중 입니다."+i);
+				board.setWriter("글쓴이" +i );
 				mapper.insert(board);
 			}
 			

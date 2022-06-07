@@ -2,6 +2,7 @@ package com.jafa.dao;
 
 import static org.junit.Assert.assertEquals;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +18,9 @@ public class TotalCountTest {
 	@Autowired
 	private BoardMapper mapper;
 	
-	@Test
-	public void totalCountTest() {
-		assertEquals(412,mapper.totalCount());
-	}
+//	@Test
+//	public void totalCountTest() {
+//		assertEquals(412,mapper.totalCount());
+//	}
 
 }
